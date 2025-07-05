@@ -1,4 +1,4 @@
-# Job-application-serverless-webapp
+# Job Application Serverless Web Application using AWS
 
 ## Overview
 
@@ -12,6 +12,10 @@ A serverless job application portal built with:
 - Recruiters can view all applications and open resumes directly from the portal.
 - Resume files are stored in S3; application data is stored in DynamoDB.
 - Serverless architecture for scalability and low cost.
+
+## Architecture Diagram
+![image](https://github.com/user-attachments/assets/2d2e3f78-182c-4281-bcc7-dad027eebdf6)
+
 
 ## How it works
 
