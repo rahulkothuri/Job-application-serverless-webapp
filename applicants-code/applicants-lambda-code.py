@@ -11,10 +11,14 @@ s3 = boto3.client('s3')
 
 def lambda_handler(event, context):
     # Parse the incoming data
-    if isinstance(event['body'], str):
-        data = json.loads(event['body'])
+    if 'body' in event:
+        if isinstance(event['body'], str):
+            data = json.loads(event['body'])
+        else:
+            data = event['body']
     else:
-        data = event['body']
+        # If 'body' is not present, treat event as the data itself (for direct Lambda testing)
+        data = event
 
     name = data.get('name', '')
     email = data.get('email', '')
